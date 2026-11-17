@@ -14,7 +14,7 @@ Telegram-бот на Rust поверх MTProto-библиотеки [grammers](h
 просит текстовый промпт и позволяет опционально выбрать соотношение сторон и
 разрешение (по большей стороне, от 1024 до 4K), затем запускает соответствующий
 workflow (`z-image-turbo`, `z-image` или `qwen-turbo`) на
-<https://comfy.r0o.ru/> через HTTP API ComfyUI, дожидается результата и отправляет
+<http://localhost:8188/> через HTTP API ComfyUI, дожидается результата и отправляет
 готовое изображение в чат.
 
 Для **Qwen Edit Turbo** можно загрузить от 1 до 10 изображений и отправить
@@ -43,7 +43,7 @@ API_ID=123456
 API_HASH=0123456789abcdef0123456789abcdef
 BOT_TOKEN=123456789:AAExampleTokenFromBotFather
 SESSION_PATH=bot.session
-# COMFY_URL=https://comfy.r0o.ru
+# COMFY_URL=http://127.0.0.1:8188
 # PROXY_URL=socks5://127.0.0.1:1080
 ```
 
@@ -52,7 +52,7 @@ SESSION_PATH=bot.session
 
 ## Генерация через ComfyUI
 
-По умолчанию используется `COMFY_URL=https://comfy.r0o.ru`. Имя workflow совпадает
+По умолчанию используется `COMFY_URL=http://127.0.0.1:8188`. Имя workflow совпадает
 с кодом режима: для кнопки Z-Image Turbo это `z-image-turbo`.
 
 Как это работает:
